@@ -4,7 +4,7 @@ local LocalPlayer = Players.LocalPlayer
 
 -- Replace these with the Roblox UserIds you want to allow
 local AllowedUsers = {
-    , -- your main account
+    7961721800, -- your main account
     2805652623, -- friend’s account
     987654321, -- friend’s account
     987654321, -- friend’s account
