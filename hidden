@@ -1,0 +1,34 @@
+--// Clean Whitelist System
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- Replace these with the Roblox UserIds you want to allow
+local AllowedUsers = {
+    7961721800, -- your main account
+    2805652623, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+    987654321, -- friend’s account
+}
+
+local function isAllowed(id)
+    for _, allowedId in ipairs(AllowedUsers) do
+        if id == allowedId then
+            return true
+        end
+    end
+    return false
+end
+
+if not isAllowed(LocalPlayer.UserId) then
+    LocalPlayer:Kick("You are not authorized to use this script.")
+    return
+end
